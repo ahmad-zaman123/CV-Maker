@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV MAKER</title>
+
+    <style>
+        #header {
+            width: 100%;
+            height: 50px;
+            border: 1px solid black;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #main {
+            width: 100%;
+            height: 1300px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+        }
+
+        #cv {
+            width: 65%;
+            height: 1300px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #inner {
+            width: 90%;
+            height: 93%;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: row;
+        }
+
+
+
+        #left {
+            width: 35%;
+            height: 100%;
+            /* border: 1px solid black; */
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #left-inner {
+            width: 80%;
+            height: 92%;
+            /* border: 1px solid goldenrod; */
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #p-pic {
+            border-radius: 50%;
+            height: 170px;
+            width: 170px;
+            border: 7px solid goldenrod;
+        }
+
+        #pp {
+            border-radius: 50%;
+            height: 170px;
+            width: 170px;
+        }
+
+        #contact-me {
+            width: 100%;
+            height: 250px;
+            /* border: 1px solid red; */
+        }
+
+        #c-header {
+            width: 100%;
+            height: 40px;
+            border: 2px solid goldenrod;
+            color: white;
+            background-color: black;
+            font-size: x-large;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .c {
+            width: 100%;
+            height: 45px;
+            /* border: 1px solid green; */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #ci1 {
+            width: 25px;
+            height: 25px;
+            /* border: 1px solid red; */
+        }
+
+        .icons {
+            filter: invert(1) brightness(100%) grayscale(100%);
+        }
+
+
+
+        .ct1 {
+            width: 172px;
+            height: 25px;
+            /* border: 1px solid red; */
+            color: whitesmoke;
+            /* font-size: small; */
+        }
+
+        #education {
+            width: 100%;
+            height: 340px;
+            /* border: 1px solid red; */
+        }
+
+        #e-header {
+            width: 100%;
+            height: 40px;
+            border: 2px solid goldenrod;
+            color: white;
+            background-color: black;
+            font-size: x-large;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .e {
+            width: 100%;
+            height: 80px;
+            /* border: 1px solid green; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+
+        .et {
+            width: 100%;
+            height: 15px;
+            /* border: 1px solid blue; */
+            color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #skills {
+            width: 100%;
+            height: 300px;
+            /* border: 1px solid red; */
+        }
+
+        #s-header {
+            width: 100%;
+            height: 40px;
+            border: 2px solid goldenrod;
+            color: white;
+            background-color: black;
+            font-size: x-large;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .s {
+            width: 100%;
+            height: 35px;
+            /* border: 1px solid green; */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            /* justify-content: space-between; */
+        }
+
+        .st {
+            width: 50%;
+            height: 10px;
+            /* border: 1px solid blue; */
+            color: whitesmoke;
+        }
+
+        .sb {
+            width: 50%;
+            height: 10px;
+            /* border: 1px solid blue; */
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .skill-per{
+            height: 10px;
+            background-color: goldenrod;
+            border-radius: 8px;
+            width: 50%;
+        }
+
+        #right {
+            width: 65%;
+            height: 100%;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #right-inner {
+            width: 85%;
+            height: 92%;
+            /* border: 1px solid black; */
+        }
+
+        #name {
+            width: 100%;
+            height: 150px;
+            /* border: 1px solid black; */
+        }
+
+        #f-name {
+            font-size: 50px;
+        }
+
+        #l-name {
+            font-size: 50px;
+        }
+
+        #job {
+            font-size: 30px;
+            color: gray;
+        }
+
+        #profile {
+            width: 100%;
+            height: 230px;
+            /* border: 1px solid black; */
+        }
+
+
+        #p-header {
+            width: 100%;
+            height: 40px;
+            border: 2px solid goldenrod;
+            /* color: white; */
+            background-color: goldenrod;
+            font-size: x-large;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+
+        #work {
+            width: 100%;
+            height: 450px;
+            /* border: 1px solid black; */
+        }
+
+        #w-header {
+            width: 100%;
+            height: 40px;
+            border: 2px solid goldenrod;
+            /* color: white; */
+            background-color: goldenrod;
+            font-size: x-large;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .w {
+            width: 100%;
+            height: 170px;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .wjy {
+            width: 100%;
+            height: 25px;
+            /* border: 1px solid red; */
+            display: flex;
+            align-items: center;
+        }
+
+        .w-job {
+            width: 80%;
+            height: 15px;
+            /* border: 1px solid blue; */
+        }
+
+        .w-year {
+            width: 20%;
+            height: 15px;
+            /* border: 1px solid blue; */
+        }
+
+        .w-company {
+            width: 100%;
+            height: 15px;
+            /* border: 1px solid blue; */
+        }
+
+        .w-description {
+            width: 100%;
+            height: 100px;
+            /* border: 1px solid blue; */
+        }
+
+        #references {
+            width: 100%;
+            height: 185px;
+            /* border: 1px solid black; */
+        }
+
+        #r-header {
+            width: 100%;
+            height: 40px;
+            border: 2px solid goldenrod;
+            /* color: white; */
+            background-color: goldenrod;
+            font-size: x-large;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .r {
+            width: 100%;
+            height: 100px;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .ref {
+            width: 40%;
+            height: 100px;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .r-des {
+            width: 100%;
+            height: 17px;
+            /* border: 1px solid blue; */
+        }
+
+        #bar {
+            width: 35%;
+            height: 1300px;
+            border: 3px solid goldenrod;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #f-buttons {
+            height: 30px;
+            width: 100%;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .section {
+            /* padding: 20px; */
+            width: 96%;
+            height: 1200px;
+            /* border: 1px solid red; */
+            display: none;
+            /* Initially hide both sections */
+        }
+
+        #form {
+            background-color: goldenrod;
+            /* padding: 10px; */
+            height: 30px;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #form:hover {
+            background-color: yellow;
+        }
+
+        .active {
+            display: block;
+            /* Show the active section */
+        }
+
+        .box {
+            height: 30px;
+            width: 100%;
+            border: 1px solid goldenrod;
+            color: whitesmoke;
+            border-radius: 3px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #prof-des {
+            width: 100%;
+            border: 1px solid goldenrod;
+            color: whitesmoke;
+            border-radius: 3px;
+            height: 70px;
+            padding: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <h2
+            style="color: white;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;text-align: center;">
+            Professional CV Maker</h2>
+    </div>
+
+    <div id="main">
+
+        <div id="bar">
+
+            <h2 style="text-align: center;color: whitesmoke;">Create Your CV</h2>
+
+            <div id="f-buttons">
+
+                <button id="form" onclick="showSection('section1')">First Form</button>
+                <button id="form" onclick="showSection('section2')">Last Form</button>
+
+            </div>
+            <div id="section1" class="section active">
+
+                <h3 style="color: whitesmoke;">Information</h3>
+                <div>
+                    <div class="box">First Name <input id="firstname" type="text" onchange="my_firstname()"></div>
+                    <div class="box">Last Name <input id="lastname" type="text" onchange="my_lastname()"></div>
+                    <div class="box">Job <input id="in-job" type="text" onchange="my_job()"></div>
+                    <div class="box">Select Image <input id="in_pp" type="file" accept="image/*"></div>
+                </div>
+
+                <br>
+
+                <h3 style="color: whitesmoke;">Contact</h3>
+                <div>
+                    <div class="box">Phone No <input id="in-phone" type="text" onchange="my_phone()"></div>
+                    <div class="box">Email Id <input id="in-mail" type="text" onchange="my_mail()"></div>
+                    <div class="box">Website <input id="in-website" type="text" onchange="my_website()"></div>
+                    <div class="box">Location <input id="in-address" type="text" onchange="my_address()"></div>
+                </div>
+
+                <br>
+
+                <h3 style="color: whitesmoke;">Undergraduation</h3>
+                <div>
+                    <div class="box">Year<input id="in-year1" type="text" onchange="my_year1()"></div>
+                    <div class="box">Degree<input id="in-degree1" type="text" onchange="degree1()"></div>
+                    <div class="box">University<input id="in-university1" type="text" onchange="my_university1()"></div>
+                </div>
+
+                <br>
+
+                <h3 style="color: whitesmoke;">Intermediate</h3>
+                <div>
+                    <div class="box">Year<input id="in-year2" type="text" onchange="my_year2()"></div>
+                    <div class="box">Degree<input id="in-degree2" type="text" onchange="my_degree2()"></div>
+                    <div class="box">College<input id="in-college2" type="text" onchange="my_college2()"></div>
+                </div>
+
+                <br>
+
+                <h3 style="color: whitesmoke;">Matriculation</h3>
+                <div>
+                    <div class="box">Year<input id="in-year3" type="text" onchange="my_year3()"></div>
+                    <div class="box">Degree<input id="in-degree3" type="text" onchange="my_degree3()"></div>
+                    <div class="box">School<input id="in-school3" type="text" onchange="my_school3()"></div>
+                </div>
+
+                <br>
+
+                <h3 style="color: whitesmoke;">Skills ( in percentage % ) </h3>
+                <div>
+                    <div class="box">UI/UX<input id="in-uiux" type="text"></div>
+                    <div class="box">Python<input id="in-python" type="text"></div>
+                    <div class="box">HTML<input id="in-html" type="text"></div>
+                    <div class="box">CSS<input id="in-css" type="text"></div>
+                    <div class="box">Javascript<input id="in-js" type="text"></div>
+                    <div class="box">Photoshop<input id="in-ps" type="text"></div>
+                </div>
+
+            </div>
+
+
+            <div id="section2" class="section">
+
+                <h3 style="color: whitesmoke;">Profile Description</h3>
+                <div id="prof-des">Profile <textarea id="in-profile" rows="10" cols="40"></textarea></div>
+
+                <br>
+
+                <h3 style="color: whitesmoke;">Work Experience 1</h3>
+                <div>
+                    <div class="box">Job Position <input id="in-job-pos1" type="text"></div>
+                    <div class="box">Year <input id="in-work-year1" type="text"></div>
+                    <div class="box">Company Name<input id="in-work-company1" type="text"></div>
+                    <div id="prof-des">Work Description <textarea id="in-work-des1" rows="10"
+                            cols="30"> </textarea></div>
+                </div>
+
+                <br>
+
+                <h3 style="color: whitesmoke;">Work Experience 2</h3>
+                <div>
+                    <div class="box">Job Position <input id="in-job-pos2" type="text"></div>
+                    <div class="box">Year <input id="in-work-year2" type="text"></div>
+                    <div class="box">Company Name<input id="in-work-company2" type="text"></div>
+                    <div id="prof-des">Work Description <textarea id="in-work-des2" rows="10"
+                            cols="30"> </textarea></div>
+                </div>
+
+                <br>
+
+                <h3 style="color: whitesmoke;">Reference 1</h3>
+                <div>
+                    <div class="box">Name<input id="in-ref-name1" type="text"></div>
+                    <div class="box">Occupation <input id="in-ref-occ1" type="text"></div>
+                    <div class="box">Phone No<input id="in-ref-phone1" type="text"></div>
+                    <div class="box">Email <input id="in-ref-mail1" type="text"></div>
+                </div>
+
+                <br>
+
+                <h3 style="color: whitesmoke;">Reference 2</h3>
+                <div>
+                    <div class="box">Name<input id="in-ref-name2" type="text"></div>
+                    <div class="box">Occupation <input id="in-ref-occ2" type="text"></div>
+                    <div class="box">Phone No<input id="in-ref-phone2" type="text"></div>
+                    <div class="box">Email <input id="in-ref-mail2" type="text"></div>
+                </div>
+
+                <br><br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+
+                <button
+                    style="color: whitesmoke;background-color: goldenrod;border-radius: 5px;padding:5px ;border: none;height: 30px;width: 80px;"
+                    onclick="print()">Print CV</button>
+
+            </div>
+
+        </div>
+
+        <div id="cv">
+
+            <div id="inner">
+
+                <div id="left">
+
+                    <div id="left-inner">
+
+                        <div id="p-pic"><img id="pp" width="170px" height="170px" src="pp.jpg"></div>
+
+                        <br><br><br>
+
+                        <div id="contact-me">
+
+                            <div id="c-header"><b>Contact Me</b></div><br>
+                            <div class="c">
+                                <div id="ci1"><img class="icons" width="20px" height="20px" src="phone.png"></div>
+                                <div class="ct1" id="out-phone">+123-456-789</div>
+                            </div>
+                            <div class="c">
+                                <div id="ci1"><img class="icons" width="20px" height="20px" src="mail.png"></div>
+                                <div class="ct1" id="out-mail">abc123@gmail.com</div>
+                            </div>
+                            <div class="c">
+                                <div id="ci1"><img class="icons" width="20px" height="20px" src="web.png"></div>
+                                <div class="ct1" id="out-website">www.mywebsite.com</div>
+                            </div>
+                            <div class="c">
+                                <div id="ci1"><img class="icons" width="20px" height="20px" src="pin.png"></div>
+                                <div class="ct1" id="out-address">123 Anywhere St, City</div>
+                            </div>
+
+                        </div>
+
+                        <br>
+
+                        <div id="education">
+
+                            <div id="e-header"><b>Education</b></div><br>
+                            <div class="e">
+                                <div class="et" id="out-year1">2007-2011</div>
+                                <div class="et" id="out-degree1"><b>BS Computer Science</b></div>
+                                <div class="et" id="out-university1">University Name</div>
+                            </div>
+                            <br>
+                            <div class="e">
+                                <div class="et" id="out-year2">2007-2011</div>
+                                <div class="et" id="out-degree2"><b>Intermediate</b></div>
+                                <div class="et" id="out-college2">College Name</div>
+                            </div>
+                            <br>
+                            <div class="e">
+                                <div class="et" id="out-year3">2007-2011</div>
+                                <div class="et" id="out-degree3"><b>Matriculation</b></div>
+                                <div class="et" id="out-school3">School Name</div>
+                            </div>
+
+                        </div>
+
+                        <br>
+
+                        <div id="skills">
+
+                            <div id="s-header"><b>Skills</b></div><br>
+                            <div class="s">
+                                <div class="st">UI/UX</div>
+                                <div class="sb">
+                                    <div class="skill-per" id="UIUX"></div>
+                                </div>
+                            </div>
+                            <div class="s">
+                                <div class="st">Python</div>
+                                <div class="sb">
+                                    <div class="skill-per" id="out-python"></div>
+                                </div>
+                            </div>
+                            <div class="s">
+                                <div class="st">HTML</div>
+                                <div class="sb">
+                                    <div class="skill-per" id="out-html"></div>
+                                </div>
+                            </div>
+                            <div class="s">
+                                <div class="st">CSS</div>
+                                <div class="sb">
+                                    <div class="skill-per" id="out-css"></div>
+                                </div>
+                            </div>
+                            <div class="s">
+                                <div class="st">Javascript</div>
+                                <div class="sb">
+                                    <div class="skill-per" id="out-js"></div>
+                                </div>
+                            </div>
+                            <div class="s">
+                                <div class="st">Photoshop</div>
+                                <div class="sb">
+                                    <div class="skill-per" id="out-ps"></div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div id="right">
+
+                    <div id="right-inner">
+
+                        <br>
+
+                        <div id="name">
+
+                            <div id="f-name"><b>First Name</b></div>
+                            <div id="l-name">Last Name</div>
+                            <div id="your-job">Your Job</div>
+
+                        </div>
+
+                        <br><br><br><br>
+
+                        <div id="profile">
+
+                            <div id="p-header">&nbsp;&nbsp;<b>Profile</b></div><br>
+                            <div id="out-profile" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                                adipisci rem, nisi laboriosam reiciendis culpa sequi eos quas repellat libero ex.
+                                Quaerat in perspiciatis, unde aspernatur ipsam autem! Alias, architecto! Lorem ipsum
+                                dolor sit amet consectetur adipisicing elit. Earum culpa porro quo, officia cumque
+                                facilis, aut vitae autem veritatis dolorum dolore cupiditate tenetur omnis sunt amet
+                                aliquam in debitis incidunt.</div>
+
+                        </div>
+
+                        <div id="work">
+
+                            <div id="w-header">&nbsp;&nbsp;<b>Work Experience</b></div><br>
+                            <div class="w">
+                                <div class="wjy">
+                                    <div class="w-job" id="out-job-pos1"><b>Job Position</b></div>
+                                    <div class="w-year" id="out-work-year1"><b>2009-2011</b></div>
+                                </div>
+                                <div class="w-company" id="out-work-company1">Company Name</div>
+                                <div class="w-description" style="text-align: justify;" id="out-work-des1">Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Dolorem, est! Et, ex libero! Corrupti consequatur omnis excepturi
+                                    eius libero dolores rem consectetur, incidunt nulla eum repellendus eaque nihil,
+                                    iure quos?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, sequi!
+                                    Mollitia debitis reprehenderit totam consequatur quis nostrum maxime,</div>
+                            </div>
+                            <br>
+                            <div class="w">
+                                <div class="wjy">
+                                    <div class="w-job" id="out-job-pos2"><b>Job Position</b></div>
+                                    <div class="w-year" id="out-work-year2"><b>2009-2011</b></div>
+                                </div>
+                                <div class="w-company" id="out-work-company2">Company Name</div>
+                                <div class="w-description" style="text-align: justify;" id="out-work-des2">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Esse quia non eum adipisci praesentium placeat provident qui.
+                                    Aliquid quae praesentium unde soluta, eum reiciendis illo laboriosam earum nobis,
+                                    quos cupiditate Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
+                                    odio voluptas animi odit natus, consequuntur sint temporibus repellat</div>
+                            </div>
+                            <br>
+
+                        </div>
+
+                        <div id="references">
+
+                            <div id="r-header">&nbsp;&nbsp;<b>References</b></div><br>
+
+                            <div class="r">
+                                <div class="ref">
+                                    <div class="r-des" id="out-ref-name1"><b>Mr John</b></div>
+                                    <div class="r-des" id="out-ref-occ1">Job Postion</div>
+                                    <div class="r-des" id="out-ref-phone1">123-456-789</div>
+                                    <div class="r-des" id="out-ref-mail1">hello@gmail.com</div>
+                                </div>
+                                <div class="ref">
+                                    <div class="r-des" id="out-ref-name2"><b>Mr John</b></div>
+                                    <div class="r-des" id="out-ref-occ2">Job Position</div>
+                                    <div class="r-des" id="out-ref-phone2">123-456-789</div>
+                                    <div class="r-des" id="out-ref-mail2">hello@gmail.com</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function (section) {
+                section.classList.remove('active');
+            });
+
+            var sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.add('active');
+        }
+
+        // first name
+
+        var in_fname = document.getElementById('firstname')
+
+        in_fname.addEventListener('input',()=>{
+            my_firstname()
+        })
+
+
+        function my_firstname()
+        {
+            var fname_value = in_fname.value
+            var out_fname = document.getElementById('f-name')
+
+            out_fname.innerHTML = `<b>${fname_value}</b>`
+        }
+
+        // last name
+
+        var in_lname = document.getElementById('lastname')
+
+        in_lname.addEventListener('input',()=>{
+            my_lastname()
+        })
+
+
+        function my_lastname()
+        {
+            var lname_value = in_lname.value
+            var out_lname = document.getElementById('l-name')
+
+            out_lname.textContent = lname_value
+        }
+
+        // job
+
+        var in_job = document.getElementById('in-job')
+
+        in_job.addEventListener('input',()=>{
+            my_job()
+        })
+
+
+        function my_job()
+        {
+            var job_value = in_job.value
+            var out_job = document.getElementById('your-job')
+
+            out_job.textContent = job_value
+        }
+
+        // profile pic
+
+        const in_pp = document.getElementById("in_pp");
+        const out_pp = document.getElementById("pp");
+
+        in_pp.addEventListener("change", function(event) {
+            const file = event.target.files[0]; 
+
+            if (file && file.type.startsWith("image/")) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    out_pp.src = e.target.result; 
+                };
+
+                reader.readAsDataURL(file);
+            } 
+        })
+
+        // ------------- CONTACT ------------------
+
+        // Phone no
+
+        const in_phone = document.getElementById('in-phone')
+
+        in_phone.addEventListener('input',()=>{
+            my_phone()
+        })
+
+
+        function my_phone()
+        {
+            var phone_value = in_phone.value
+            var out_phone = document.getElementById('out-phone')
+
+            out_phone.textContent = phone_value
+        }
+
+        // email
+
+        const in_mail = document.getElementById('in-mail')
+        const out_mail = document.getElementById('out-mail')
+
+        in_mail.addEventListener('input',()=>{
+            my_mail()
+        })
+
+
+        function my_mail()
+        {
+            const mail_value = in_mail.value
+            out_mail.textContent = mail_value
+        }
+
+        // website
+
+        const in_website = document.getElementById('in-website')
+        const out_website = document.getElementById('out-website')
+
+        in_website.addEventListener('input',()=>{
+            my_website()
+        })
+
+
+        function my_website()
+        {
+            const website_value = in_website.value
+            out_website.textContent = website_value
+        }
+
+        // address
+
+        const in_address = document.getElementById('in-address')
+        const out_address = document.getElementById('out-address')
+
+        in_address.addEventListener('input',()=>{
+            my_address()
+        })
+
+
+        function my_address()
+        {
+            const address_value = in_address.value
+            out_address.textContent = address_value
+        }
+
+
+        // ------------------ Education -----------------
+
+        // ------------------- Undergraduation ----------------
+
+        const in_year1 = document.getElementById('in-year1')
+        const out_year1 = document.getElementById('out-year1')
+
+        in_year1.addEventListener('input',()=>{
+            my_year1()
+        })
+
+
+        function my_year1()
+        {
+            const year1_value = in_year1.value
+            out_year1.textContent = year1_value
+        }
+
+        const in_degree1 = document.getElementById('in-degree1')
+        const out_degree1 = document.getElementById('out-degree1')
+
+        in_degree1.addEventListener('input',()=>{
+            my_degree1()
+        })
+
+
+        function my_degree1()
+        {
+            const degree1_value = in_degree1.value
+            out_degree1.innerHTML = `<b>${degree1_value}</b>`
+        }
+
+        const in_university1 = document.getElementById('in-university1')
+        const out_university1 = document.getElementById('out-university1')
+
+        in_university1.addEventListener('input',()=>{
+            my_university1()
+        })
+
+
+        function my_university1()
+        {
+            const university1_value = in_university1.value
+            out_university1.textContent = university1_value
+        }
+
+
+        // ------------- Intermediate ---------------
+
+        const in_year2 = document.getElementById('in-year2')
+        const out_year2 = document.getElementById('out-year2')
+
+        in_year2.addEventListener('input',()=>{
+            my_year2()
+        })
+
+
+        function my_year2()
+        {
+            const year2_value = in_year2.value
+            out_year2.textContent = year2_value
+        }
+
+        const in_degree2 = document.getElementById('in-degree2')
+        const out_degree2 = document.getElementById('out-degree2')
+
+        in_degree2.addEventListener('input',()=>{
+            my_degree2()
+        })
+
+
+        function my_degree2()
+        {
+            const degree2_value = in_degree2.value
+            out_degree2.innerHTML = `<b>${degree2_value}</b>`
+        }
+
+        const in_college2 = document.getElementById('in-college2')
+        const out_college2 = document.getElementById('out-college2')
+
+        in_college2.addEventListener('input',()=>{
+            my_college2()
+        })
+
+
+        function my_college2()
+        {
+            const college2_value = in_college2.value
+            out_college2.textContent = college2_value
+        }
+
+
+        // ----------------- Matriculation ----------------
+
+        const in_year3 = document.getElementById('in-year3')
+        const out_year3 = document.getElementById('out-year3')
+
+        in_year3.addEventListener('input',()=>{
+            my_year3()
+        })
+
+
+        function my_year3()
+        {
+            const year3_value = in_year3.value
+            out_year3.textContent = year3_value
+        }
+
+        const in_degree3 = document.getElementById('in-degree3')
+        const out_degree3 = document.getElementById('out-degree3')
+
+        in_degree3.addEventListener('input',()=>{
+            my_degree3()
+        })
+
+
+        function my_degree3()
+        {
+            const degree3_value = in_degree3.value
+            out_degree3.innerHTML = `<b>${degree3_value}</b>`
+        }
+
+        const in_school3 = document.getElementById('in-school3')
+        const out_school3 = document.getElementById('out-school3')
+
+        in_school3.addEventListener('input',()=>{
+            my_school3()
+        })
+
+
+        function my_school3()
+        {
+            const school3_value = in_school3.value
+            out_school3.textContent = school3_value
+        }
+
+
+        // ---------------- SKILLS ------------------
+
+        // UIUX
+
+        const in_uiux = document.getElementById('in-uiux')
+        const out_uiux = document.getElementById('UIUX')
+
+        in_uiux.addEventListener('input',()=>{
+            my_UIUX()
+        })
+
+
+        function my_UIUX()
+        {
+            const uiux_value = in_uiux.value
+            out_uiux.style.width = `${uiux_value}%`
+        }
+
+        // PYTHON
+
+        const in_python = document.getElementById('in-python')
+        const out_python = document.getElementById('out-python')
+
+        in_python.addEventListener('input',()=>{
+            my_python()
+        })
+
+
+        function my_python()
+        {
+            const python_value = in_python.value
+            out_python.style.width = `${python_value}%`
+        }
+
+        // HTML
+
+        const in_html = document.getElementById('in-html')
+        const out_html = document.getElementById('out-html')
+
+        in_html.addEventListener('input',()=>{
+            my_html()
+        })
+
+
+        function my_html()
+        {
+            const html_value = in_html.value
+            out_html.style.width = `${html_value}%`
+        }
+
+        // CSS
+
+        const in_css = document.getElementById('in-css')
+        const out_css = document.getElementById('out-css')
+
+        in_css.addEventListener('input',()=>{
+            my_css()
+        })
+
+
+        function my_css()
+        {
+            const css_value = in_css.value
+            out_css.style.width = `${css_value}%`
+        }
+
+        // JAVASCRIPT
+
+        const in_js = document.getElementById('in-js')
+        const out_js = document.getElementById('out-js')
+
+        in_js.addEventListener('input',()=>{
+            my_js()
+        })
+
+
+        function my_js()
+        {
+            const js_value = in_js.value
+            out_js.style.width = `${js_value}%`
+        }
+
+        // PHOTOSHOP
+
+        const in_ps = document.getElementById('in-ps')
+        const out_ps = document.getElementById('out-ps')
+
+        in_ps.addEventListener('input',()=>{
+            my_ps()
+        })
+
+
+        function my_ps()
+        {
+            const ps_value = in_ps.value
+            out_ps.style.width = `${ps_value}%`
+        }
+
+        // ------------- PROFILE ---------------
+
+        const in_profile = document.getElementById('in-profile')
+        const out_profile = document.getElementById('out-profile')
+
+        in_profile.addEventListener('input',()=>{
+            my_profile()
+        })
+
+
+        function my_profile()
+        {
+            out_profile.textContent = in_profile.value
+        }
+
+        // -------------- WORK EXPEREINCE -------------
+
+        const in_job_pos1 = document.getElementById('in-job-pos1')
+        const out_job_pos1 = document.getElementById('out-job-pos1')
+
+        in_job_pos1.addEventListener('input',()=>{
+            my_job_pos1()
+        })
+
+
+        function my_job_pos1()
+        {
+            out_job_pos1.innerHTML = `<b>${in_job_pos1.value}</b>`
+        }
+
+        const in_work_year1 = document.getElementById('in-work-year1')
+        const out_work_year1 = document.getElementById('out-work-year1')
+
+        in_work_year1.addEventListener('input',()=>{
+            my_work_year1()
+        })
+
+
+        function my_work_year1()
+        {
+            out_work_year1.innerHTML = `<b>${in_work_year1.value}</b>`
+        }
+
+        const in_work_company1 = document.getElementById('in-work-company1')
+        const out_work_company1 = document.getElementById('out-work-company1')
+
+        in_work_company1.addEventListener('input',()=>{
+            my_work_company1()
+        })
+
+
+        function my_work_company1()
+        {
+            out_work_company1.textContent = in_work_company1.value
+        }
+
+        const in_work_des1 = document.getElementById('in-work-des1')
+        const out_work_des1 = document.getElementById('out-work-des1')
+
+        in_work_des1.addEventListener('input',()=>{
+            my_work_des1()
+        })
+
+
+        function my_work_des1()
+        {
+            out_work_des1.textContent = in_work_des1.value
+        }
+
+
+        // work expereince 2
+
+        const in_job_pos2 = document.getElementById('in-job-pos2')
+        const out_job_pos2 = document.getElementById('out-job-pos2')
+
+        in_job_pos2.addEventListener('input',()=>{
+            my_job_pos2()
+        })
+
+
+        function my_job_pos2()
+        {
+            out_job_pos2.innerHTML = `<b>${in_job_pos2.value}</b>`
+        }
+
+        const in_work_year2 = document.getElementById('in-work-year2')
+        const out_work_year2 = document.getElementById('out-work-year2')
+
+        in_work_year2.addEventListener('input',()=>{
+            my_work_year2()
+        })
+
+
+        function my_work_year2()
+        {
+            out_work_year2.innerHTML = `<b>${in_work_year2.value}</b>`
+        }
+
+        const in_work_company2 = document.getElementById('in-work-company2')
+        const out_work_company2 = document.getElementById('out-work-company2')
+
+        in_work_company2.addEventListener('input',()=>{
+            my_work_company2()
+        })
+
+
+        function my_work_company2()
+        {
+            out_work_company2.textContent = in_work_company2.value
+        }
+
+        const in_work_des2 = document.getElementById('in-work-des2')
+        const out_work_des2 = document.getElementById('out-work-des2')
+
+        in_work_des2.addEventListener('input',()=>{
+            my_work_des2()
+        })
+
+
+        function my_work_des2()
+        {
+            out_work_des2.textContent = in_work_des2.value
+        }
+
+        // ------------- REFERNECES --------------
+
+        const in_ref_name1 = document.getElementById('in-ref-name1')
+        const out_ref_name1 = document.getElementById('out-ref-name1')
+
+        in_ref_name1.addEventListener('input',()=>{
+            my_ref_name1()
+        })
+
+
+        function my_ref_name1()
+        {
+            out_ref_name1.innerHTML = `<b>${in_ref_name1.value}</b>`
+        }
+
+        const in_ref_occ1 = document.getElementById('in-ref-occ1')
+        const out_ref_occ1 = document.getElementById('out-ref-occ1')
+
+        in_ref_occ1.addEventListener('input',()=>{
+            my_ref_occ1()
+        })
+
+
+        function my_ref_occ1()
+        {
+            out_ref_occ1.textContent = in_ref_occ1.value
+        }
+
+        const in_ref_phone1 = document.getElementById('in-ref-phone1')
+        const out_ref_phone1 = document.getElementById('out-ref-phone1')
+
+        in_ref_phone1.addEventListener('input',()=>{
+            my_ref_phone1()
+        })
+
+
+        function my_ref_phone1()
+        {
+            out_ref_phone1.textContent = in_ref_phone1.value
+        }
+
+        const in_ref_mail1 = document.getElementById('in-ref-mail1')
+        const out_ref_mail1 = document.getElementById('out-ref-mail1')
+
+        in_ref_mail1.addEventListener('input',()=>{
+            my_ref_mail1()
+        })
+
+
+        function my_ref_mail1()
+        {
+            out_ref_mail1.textContent = in_ref_mail1.value
+        }
+
+
+        // reference 2
+
+        const in_ref_name2 = document.getElementById('in-ref-name2')
+        const out_ref_name2 = document.getElementById('out-ref-name2')
+
+        in_ref_name2.addEventListener('input',()=>{
+            my_ref_name2()
+        })
+
+
+        function my_ref_name2()
+        {
+            out_ref_name2.innerHTML = `<b>${in_ref_name2.value}</b>`
+        }
+
+        const in_ref_occ2 = document.getElementById('in-ref-occ2')
+        const out_ref_occ2 = document.getElementById('out-ref-occ2')
+
+        in_ref_occ2.addEventListener('input',()=>{
+            my_ref_occ2()
+        })
+
+
+        function my_ref_occ2()
+        {
+            out_ref_occ2.textContent = in_ref_occ2.value
+        }
+
+        const in_ref_phone2 = document.getElementById('in-ref-phone2')
+        const out_ref_phone2 = document.getElementById('out-ref-phone2')
+
+        in_ref_phone2.addEventListener('input',()=>{
+            my_ref_phone2()
+        })
+
+
+        function my_ref_phone2()
+        {
+            out_ref_phone2.textContent = in_ref_phone2.value
+        }
+
+        const in_ref_mail2 = document.getElementById('in-ref-mail2')
+        const out_ref_mail2 = document.getElementById('out-ref-mail2')
+
+        in_ref_mail2.addEventListener('input',()=>{
+            my_ref_mail2()
+        })
+
+
+        function my_ref_mail2()
+        {
+            out_ref_mail2.textContent = in_ref_mail2.value
+        }
+
+    </script>
+
+</body>
+
+</html>
